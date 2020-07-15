@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "IDとパスワードを入力してください。"
+AuthUserFile C:\xampp\htdocs\php\php_lesson\section02\mainte\.htpasswd
+require valid-user
