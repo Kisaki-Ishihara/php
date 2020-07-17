@@ -10,7 +10,7 @@ $fileContents = file_get_contents($contactFile);
 // ファイルに書き込み(上書き)
 // file_put_contents($contactFile, 'テストです');
 
-// 改行 -> \r\n
+// 改行 \r\n
 $addText = 'テストです' . "\r\n";
 
 // ファイルに書き込み(追記)
@@ -22,7 +22,10 @@ file_put_contents($contactFile, $addText, FILE_APPEND);
 $allData = file($contactFile);
 
 foreach($allData as $lineData){
-    $
+    $lines = explode(',', $lineData);
+    echo $lines[0] . '<br>';
+    echo $lines[1] . '<br>';
+    echo $lines[2] . '<br>';
 }
 
 ?>
