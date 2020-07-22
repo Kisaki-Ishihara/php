@@ -6,7 +6,7 @@ class Product{
 
     // 価格取得
     public function getPrice(){
-        return $this->$price;
+        return $this->price;
     }
 }
 
@@ -15,8 +15,8 @@ class Cart{
     private $products = [];
 
     // 商品追加
-    public function addItem($products){
-        $this->$products[] = $product;
+    public function addItem($product){
+        $this->products[] = $product;
     }
     // 商品取得
     public function getItem($index){
@@ -27,10 +27,10 @@ class Cart{
 $cart = new Cart();
 
 // 引数にインスタンス
-$cart->addItem(new Product()); // エラー
+$cart->addItem(new Product());
 
 // 通常(それぞれメソッド実行)
-$gotItem = $cart->getItem(0); // エラー
+$gotItem = $cart->getItem(0);
 $price = $gotItem->getPrice();
 
 echo '<br>';
